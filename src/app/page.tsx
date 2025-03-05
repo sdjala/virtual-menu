@@ -12,7 +12,7 @@ export default function Menu() {
     <div className="min-h-screen flex flex-col items-center bg-white">
       <div className="flex flex-col relative max-w-[430px] w-full bg-[#f5f0e8]">
         <Image 
-          src="/images/header-image.jpg"
+          src="/header-image.jpg"
           width={430}
           height={240}
           alt="Header Image"
