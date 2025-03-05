@@ -1,149 +1,184 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Tab, TabGroup, TabList, TabPanels, TabPanel } from "@headlessui/react";
 import { Fragment } from "react";
 import { PiBeerBottleFill, PiHamburger, PiPizza } from "react-icons/pi";
 import { TbSoup } from "react-icons/tb";
-import { GiLaurels } from "react-icons/gi";
+import Image from "next/image";
+
 
 export default function Menu() {
   return (
-    <div className="min-h-screen p-5 flex flex-col items-center bg-ivory-cream">
-      <motion.div
-        className="flex flex-col items-center text-black"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Centered Icon with Gradient */}
-        <GiLaurels className="text-6xl text-[#56ca9d] mb-2" />
+    <div className="min-h-screen flex flex-col items-center bg-white">
+      <div className="flex flex-col relative max-w-[430px] w-full bg-[#f5f0e8]">
+        <Image 
+          src="/images/header-image.jpg"
+          width={430}
+          height={240}
+          alt="Header Image"
+        />
 
-        {/* Title */}
-        <h1 className="text-4xl font-bold text-black">Menu Virtuale</h1>
-      </motion.div>
-      <motion.h4
-        className="text-2xl uppercase font-bold text-black mb-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        Te Gjitha
-      </motion.h4>
+        <div className="flex flex-col items-center gap-3 bg-[#FFFDF9] py-4 px-5 rounded-lg mx-5 -mt-6">
+          <div className="flex items-center text-[#231100] gap-1">
+            <h3 className="font-light text-xl">Mireserdhe ne</h3>
+            <h2 className="font-semibold text-2xl">UNICA PIZZA!</h2>
+          </div>
+          <div className="h-[1px] w-full bg-[#F0EFEC]" />
+          <p className="text-[#231100B2] text-center text-sm">
+            Ju ftojme te provoni shijet tradicionale italiane me ne! Me poshte ju mund te shihni menune tone virtuale.
+          </p>
+          <div className="flex w-full px-2">
+            <div className="flex flex-col flex-1 text-[#231100B2]">
+              <h4 className="text-sm font-semibold">Adresa:</h4>
+              <p className="text-sm">Blvd. Nenetereza</p>
+              <p className="text-sm">St. Autobusave Kamez</p>
+            </div>
+            <div className="flex w-[1px] bg-[#F0EFEC] mx-4" />
+            <div className="flex flex-col flex-1 text-[#231100B2]">
+              <h4 className="text-sm font-semibold">Nr Tel:</h4>
+              <p className="text-sm">068 658 6258</p>
+            </div>
+          </div>
 
-      {/* Menu Tabs */}
-      <TabGroup>
-        <TabList className="flex space-x-2">
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md font-bold text-2xl ${
-                  selected ? "bg-black text-white" : "text-black"
-                }`}
-              >
-                <PiBeerBottleFill className="text-3xl" />
-                <span>Pijet</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md font-bold text-2xl ${
-                  selected ? "bg-black text-white" : "text-black"
-                }`}
-              >
-                <PiPizza className="text-3xl" />
-                <span>Pizza</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md font-bold text-2xl ${
-                  selected ? "bg-black text-white" : "text-black"
-                }`}
-              >
-                <PiHamburger className="text-3xl" />
-                <span>Sandwiches</span>
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={`flex items-center space-x-2 px-4 py-2 rounded-md font-bold text-2xl ${
-                  selected ? "bg-black text-white" : "text-black"
-                }`}
-              >
-                <TbSoup className="text-3xl" />
-                <span>Supa</span>
-              </button>
-            )}
-          </Tab>
-        </TabList>
+        </div>
 
-        <TabPanels className="mt-4 w-full p-5 border rounded-lg bg-ivory-cream shadow-md">
-          <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
-            <div className="flex flex-col justify-center">
-              <p className="text-lg text-black">Uje</p>
-              <p className="text-lg text-black">60L</p>
-            </div>
-            <div className="flex justify-end">
-              <img
-                src="https://freshalbmarket.co.uk/263-medium_default/lajthiza-premium-mineral-water-05l-out-of-stock.jpg"
-                alt="Lajthiza Water"
-                className="w-40 h-auto object-cover rounded-lg"
-              />
-            </div>
-          </TabPanel>
-          <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
-            <div className="flex flex-col justify-center">
-              <p className="text-lg text-black">Margerita N/M</p>
-              <p className="text-m text-subtitle-gray">Domate, Mozzarella</p>
-              <p className="text-lg text-black">400L</p>
-            </div>
-            <div className="flex justify-end">
-              <img
-                src="https://as2.ftcdn.net/jpg/06/09/87/69/1000_F_609876955_LM9vRt1Dy60FUMfdvS63jCNAJ1m40w9q.jpg"
-                alt="Margerita"
-                className="w-40 h-auto object-cover rounded-lg"
-              />
-            </div>
-          </TabPanel>
-          <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
-            <div className="flex flex-col justify-center">
-              <p className="text-lg text-black">Fshati</p>
-              <p className="text-m text-subtitle-gray">
-                Mozzarella, ullinj, spec, domate, sallam, djath i bardhe,
-                majonez
-              </p>
-              <p className="text-lg text-black">200L</p>
-            </div>
-            <div className="flex justify-end">
-              <img
-                src="https://image.similarpng.com/file/similarpng/very-thumbnail/2021/06/Bologna-and-lettuce-sandwich-isolated-on-transparent-background-PNG.png"
-                alt="Sandwich Fshati"
-                className="w-40 h-auto object-cover rounded-lg"
-              />
-            </div>
-          </TabPanel>
-          <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
-            <div className="flex flex-col justify-center">
-              <p className="text-lg text-black">Supe Vici</p>
-              <p className="text-lg text-black">200L</p>
-            </div>
-            <div className="flex justify-end">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjP6D_EiFNW4BPSGUZSzCUAM1nkTWHZl_QeA&s"
-                alt="Supe Vici"
-                className="w-40 h-auto object-cover rounded-lg"
-              />
-            </div>
-          </TabPanel>
-        </TabPanels>
-      </TabGroup>
+        <div className="flex flex-col items-center text-black mt-10 gap-0.5">
+          <Image
+            src="/images/logo.png"
+            width={68}
+            height={100}
+            alt="Unica Pizza Logo"
+          />
+          <h1 className="text-2xl font-medium text-black">Menu Virtuale</h1>
+        </div>
+
+        <div className="flex justify-center mb-4 mt-6">
+          <h4 className="text-xs font-medium text-black">
+            Te Gjitha
+          </h4>
+        </div>
+
+        {/* Menu Tabs */}
+        <TabGroup>
+          <TabList className="flex px-3 gap-2 items-center">
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
+                    selected ? "bg-black text-white c" : "text-black"
+                  }`}
+                >
+                  <PiBeerBottleFill className="text-c" />
+                  <span>Pijet</span>
+                </button>
+              )}
+            </Tab>
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
+                    selected ? "bg-black text-white border-0" : "text-black"
+                  }`}
+                >
+                  <PiPizza className="text-[20px]" />
+                  <span>Pizza</span>
+                </button>
+              )}
+            </Tab>
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
+                    selected ? "bg-black text-white border-0" : "text-black"
+                  }`}
+                >
+                  <PiHamburger className="text-[20px]" />
+                  <span>Sandwiches</span>
+                </button>
+              )}
+            </Tab>
+            <Tab as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
+                    selected ? "bg-black text-white border-0" : "text-black"
+                  }`}
+                >
+                  <TbSoup className="text-[20px]" />
+                  <span>Supa</span>
+                </button>
+              )}
+            </Tab>
+          </TabList>
+
+          <div className="w-full h-[1px] bg-[#D8D2C5] mt-4"/>
+
+          <TabPanels className="mt-[30px] mb-8 w-full px-5">
+            <TabPanel className="flex flex-col gap-3">
+              <div className="flex justify-center w-full">
+                <h3 className="text-[32px] text-[#2F2F2F] font-semibold">Pijet - Drinks</h3>
+              </div>
+              {/* TODO: copy paste component below and change text and image then add for other TabPanel-s */}
+              <div className="flex justify-between items-center">
+                <div className="flex flex-col gap-3">
+                  <p className="text-lg text-[#232323] font-medium">Uje</p>
+                  <p className="text-lg text-[#232323] font-medium">60L</p>
+                </div>
+                  <Image 
+                    src="/images/lajthiza.png" 
+                    alt="Lajthiza"
+                    width={46}
+                    height={115}
+                  />
+              </div>
+            </TabPanel>
+            <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
+              <div className="flex flex-col justify-center">
+                <p className="text-lg text-black">Margerita N/M</p>
+                <p className="text-m text-subtitle-gray">Domate, Mozzarella</p>
+                <p className="text-lg text-black">400L</p>
+              </div>
+              <div className="flex justify-end">
+                <img
+                  src="https://as2.ftcdn.net/jpg/06/09/87/69/1000_F_609876955_LM9vRt1Dy60FUMfdvS63jCNAJ1m40w9q.jpg"
+                  alt="Margerita"
+                  className="w-40 h-auto object-cover rounded-lg"
+                />
+              </div>
+            </TabPanel>
+            <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
+              <div className="flex flex-col justify-center">
+                <p className="text-lg text-black">Fshati</p>
+                <p className="text-m text-subtitle-gray">
+                  Mozzarella, ullinj, spec, domate, sallam, djath i bardhe,
+                  majonez
+                </p>
+                <p className="text-lg text-black">200L</p>
+              </div>
+              <div className="flex justify-end">
+                <img
+                  src="https://image.similarpng.com/file/similarpng/very-thumbnail/2021/06/Bologna-and-lettuce-sandwich-isolated-on-transparent-background-PNG.png"
+                  alt="Sandwich Fshati"
+                  className="w-40 h-auto object-cover rounded-lg"
+                />
+              </div>
+            </TabPanel>
+            <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
+              <div className="flex flex-col justify-center">
+                <p className="text-lg text-black">Supe Vici</p>
+                <p className="text-lg text-black">200L</p>
+              </div>
+              <div className="flex justify-end">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjP6D_EiFNW4BPSGUZSzCUAM1nkTWHZl_QeA&s"
+                  alt="Supe Vici"
+                  className="w-40 h-auto object-cover rounded-lg"
+                />
+              </div>
+            </TabPanel>
+          </TabPanels>
+        </TabGroup>
+      </div>
     </div>
   );
 }
