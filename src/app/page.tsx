@@ -64,7 +64,7 @@ export default function Menu() {
 
         {/* Menu Tabs */}
         <TabGroup>
-          <TabList className="flex px-3 gap-2 items-center">
+          <TabList className="flex px-3 justify-between items-center">
             <Tab as={Fragment}>
               {({ selected }) => (
                 <button
