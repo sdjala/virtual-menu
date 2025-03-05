@@ -57,7 +57,7 @@ export default function Menu() {
         </div>
 
         <div className="flex justify-center mb-4 mt-6">
-          <h4 className="text-xs font-medium text-black">
+          <h4 className="text-xs uppercase font-medium text-black">
             Te Gjitha
           </h4>
         </div>
