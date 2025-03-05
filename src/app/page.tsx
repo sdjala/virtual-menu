@@ -69,7 +69,7 @@ export default function Menu() {
               {({ selected }) => (
                 <button
                   className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
-                    selected ? "bg-black text-white c" : "text-black"
+                    selected ? "bg-black text-white" : "text-black"
                   }`}
                 >
                   <PiBeerBottleFill className="text-c" />
@@ -81,7 +81,7 @@ export default function Menu() {
               {({ selected }) => (
                 <button
                   className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
-                    selected ? "bg-black text-white border-0" : "text-black"
+                    selected ? "bg-black text-white" : "text-black"
                   }`}
                 >
                   <PiPizza className="text-[20px]" />
@@ -93,7 +93,7 @@ export default function Menu() {
               {({ selected }) => (
                 <button
                   className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
-                    selected ? "bg-black text-white border-0" : "text-black"
+                    selected ? "bg-black text-white" : "text-black"
                   }`}
                 >
                   <PiHamburger className="text-[20px]" />
@@ -105,7 +105,7 @@ export default function Menu() {
               {({ selected }) => (
                 <button
                   className={`flex items-center px-2 py-3 rounded-md font-medium text-md gap-2 ${
-                    selected ? "bg-black text-white border-0" : "text-black"
+                    selected ? "bg-black text-white" : "text-black"
                   }`}
                 >
                   <TbSoup className="text-[20px]" />
@@ -119,6 +119,7 @@ export default function Menu() {
 
           <TabPanels className="mt-[30px] mb-8 w-full px-5">
             <TabPanel className="flex flex-col gap-3">
+              {/* TODO: copy paste component below and change text then add for other TabPanel-s */}
               <div className="flex justify-center w-full">
                 <h3 className="text-[32px] text-[#2F2F2F] font-semibold">Pijet - Drinks</h3>
               </div>
@@ -136,6 +137,7 @@ export default function Menu() {
                   />
               </div>
             </TabPanel>
+
             <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
               <div className="flex flex-col justify-center">
                 <p className="text-lg text-black">Margerita N/M</p>
@@ -150,6 +152,7 @@ export default function Menu() {
                 />
               </div>
             </TabPanel>
+
             <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
               <div className="flex flex-col justify-center">
                 <p className="text-lg text-black">Fshati</p>
@@ -167,6 +170,7 @@ export default function Menu() {
                 />
               </div>
             </TabPanel>
+
             <TabPanel className="grid-cols-2 gap-4 grid grid-cols-2 gap-4 md:gap-8">
               <div className="flex flex-col justify-center">
                 <p className="text-lg text-black">Supe Vici</p>
