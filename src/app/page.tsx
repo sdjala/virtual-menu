@@ -6,13 +6,17 @@ import { PiBeerBottleFill, PiHamburger, PiPizza } from "react-icons/pi";
 import { TbSoup } from "react-icons/tb";
 import Image from "next/image";
 
+import logoImg from '../../public/images/logo.png';
+import headerImg from '../../public/images/header-image.jpg';
+import lajthizaImg from '../../public/images/lajthiza.png';
+
 
 export default function Menu() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-white">
       <div className="flex flex-col relative max-w-[430px] w-full bg-[#f5f0e8]">
         <Image 
-          src="/header-image.jpg"
+          src={headerImg}
           width={430}
           height={240}
           alt="Header Image"
@@ -44,7 +48,7 @@ export default function Menu() {
 
         <div className="flex flex-col items-center text-black mt-10 gap-0.5">
           <Image
-            src="/images/logo.png"
+            src={logoImg}
             width={68}
             height={100}
             alt="Unica Pizza Logo"
@@ -125,7 +129,7 @@ export default function Menu() {
                   <p className="text-lg text-[#232323] font-medium">60L</p>
                 </div>
                   <Image 
-                    src="/images/lajthiza.png" 
+                    src={lajthizaImg}
                     alt="Lajthiza"
                     width={46}
                     height={115}
