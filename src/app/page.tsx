@@ -719,6 +719,7 @@ export default function Menu() {
                   height={124}
                 />
               </div>
+              <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
                   <p className="text-lg text-[#232323] font-medium">
@@ -733,6 +734,7 @@ export default function Menu() {
                   height={124}
                 />
               </div>
+              <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
                   <p className="text-lg text-[#232323] font-medium">Pilaf</p>
@@ -745,6 +747,7 @@ export default function Menu() {
                   height={124}
                 />
               </div>
+              <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
                   <p className="text-lg text-[#232323] font-medium">
@@ -759,6 +762,7 @@ export default function Menu() {
                   height={124}
                 />
               </div>
+              <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
                   <p className="text-lg text-[#232323] font-medium">Qofte</p>
