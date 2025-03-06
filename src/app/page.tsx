@@ -244,7 +244,7 @@ export default function Menu() {
             <TabPanel className="flex flex-col gap-3">
               <div className="flex justify-center w-full">
                 <h3 className="text-[32px] text-[#2F2F2F] font-semibold">
-                  Italian Pizza's
+                  {"Italian Pizza's"}
                 </h3>
               </div>
               <div className="flex justify-between items-center">
