@@ -488,7 +488,7 @@ export default function Menu() {
               <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
-                  <p className="text-lg text-[#232323] font-bold">
+                  <p className="text-lg text-[#232323] font-medium">
                     Vegjetariane N/M
                   </p>
                   <p className="text-m text-subtitle-gray">
@@ -506,7 +506,7 @@ export default function Menu() {
               <br />
               <div className="flex justify-between items-center">
                 <div className="flex flex-col gap-3">
-                  <p className="text-lg text-[#232323] font-bold">
+                  <p className="text-lg text-[#232323] font-medium">
                     Mexikane N/M
                   </p>
                   <p className="text-m text-subtitle-gray">
